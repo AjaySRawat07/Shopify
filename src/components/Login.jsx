@@ -79,8 +79,8 @@ const Login = () => {
       </div>
 
       {/* Right Side (Image Section) */}
-      <div className="w-1/2 flex items-center justify-center bg-gray-200">
-        <img src={shoppingImg} alt="Shopping" className="w-full rounded-lg shadow-lg" />
+      <div className="w-1/2 h-screen flex items-center justify-center bg-gray-200">
+        <img src={shoppingImg} alt="Shopping" className="w-full mb-10 rounded-lg shadow-lg" />
       </div>
     </div>
   );

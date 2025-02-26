@@ -28,11 +28,11 @@ const UpdateUserForm = ({ setShowForm }) => {
         <input
           type="text"
           value={updatedData.name.first}
-          onChange={(e) => setUpdatedData({ ...updatedData, first: e.target.value })}
+          onChange={(e) => setUpdatedData({ ...updatedData, name : {...updatedData.name,first: e.target.value} })}
           className="block w-full border p-2 rounded mb-3"
         />
 
-<label className="block font-semibold mb-1">Last Name:</label>
+     <label className="block font-semibold mb-1">Last Name:</label>
         <input
           type="text"
           value={updatedData.name.last}

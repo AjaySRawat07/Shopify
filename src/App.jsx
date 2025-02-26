@@ -9,7 +9,7 @@ import Product from "./components/Products";
 import ProductDetails from "./components/ProductDetails";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
-import ProtectedRoute from "./components/ProductDetails"; // Ensure this is correctly imported
+import ProtectedRoute from "./components/protectedRoute"; 
 
 function App() {
   return (

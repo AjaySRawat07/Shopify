@@ -12,7 +12,7 @@ const Product = () => {
   );
 
   return (
-    <div className="flex gap-2 border-b-blue-300 shadow-lg shadow-black m-16 min-w-1/6 min-h-96 mt-20 ">
+    <div className="flex gap-2 border-b-blue-300 shadow-lg shadow-black m-10 min-w-1/6 min-h-96 mt-20 ">
       {/* Sidebar */}
       <div className="bg-black text-white font-bold p-3 grid gap-y-8">
         <div className="cursor-pointer" onClick={() => setCategory("electronics")}>Electronics</div>

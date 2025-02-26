@@ -36,7 +36,7 @@ const ProductDetails = () => {
     <div className="flex flex-col items-center p-6">
       <button onClick={() => navigate(-1)} className="mb-4 text-purple-400 border-4 px-3 rounded-md text-2xl">🔙</button>
       <div className="text-2xl font-bold bg-red-300 p-2 m-2">{product.title}</div>
-      <div className="flex">
+      <div className="flex mt-10">
           <img src={product.image} alt={product.title} className="w-96 h-96 object-contain mx-4 my-0.5" />
           <div className="my-6 mx-4">
           <p className="text-lg "><strong>Price : </strong> ${product.price}</p>
