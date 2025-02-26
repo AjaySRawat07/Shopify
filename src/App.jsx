@@ -63,7 +63,7 @@ function App() {
             }
           />
 
-          {/* Redirect all unknown routes to /login */}
+          {/* Redirect all unknown routes to /login in */}
           <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>
       </BrowserRouter>
