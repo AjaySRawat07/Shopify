@@ -1,23 +1,74 @@
-import { BrowserRouter,Routes, Route } from "react-router-dom"
-import Navbar from "./components/Navbar"
-import HomePage from "./components/HomePage"
-import Product from "./components/Product"
-import Users from "./components/Users"
-import Contact from "./components/Contact"
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import HomePage from "./components/HomePage";
+import Users from "./components/Users";
+import Contact from "./components/Contact";
+import { Provider } from "react-redux";
+import { store } from "./store/store";
+import Product from "./components/Products";
+import ProductDetails from "./components/ProductDetails";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
+import ProtectedRoute from "./components/ProductDetails"; // Ensure this is correctly imported
 
 function App() {
-
   return (
-    <BrowserRouter>
-    <Navbar />
+    <Provider store={store}>
+      <BrowserRouter>
+        <Navbar />
         <Routes>
-          <Route path="/" element={<HomePage />}/>
-          <Route path="/products" element={<Product />}/>
-          <Route path="/users" element={<Users />}/>
-          <Route path="/contact" element={<Contact />}/>
+          {/* Public Routes */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+
+          {/*  Protect These Routes */}
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <HomePage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/products"
+            element={
+              <ProtectedRoute>
+                <Product />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/products/:id"
+            element={
+              <ProtectedRoute>
+                <ProductDetails />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/users"
+            element={
+              <ProtectedRoute>
+                <Users />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <ProtectedRoute>
+                <Contact />
+              </ProtectedRoute>
+            }
+          />
+
+          {/* Redirect all unknown routes to /login */}
+          <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>
-    </BrowserRouter>
-  )
+      </BrowserRouter>
+    </Provider>
+  );
 }
 
-export default App
+export default App;
