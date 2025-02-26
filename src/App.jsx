@@ -9,7 +9,7 @@ import Product from "./components/Products";
 import ProductDetails from "./components/ProductDetails";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
-import ProtectedRoute from "./components/protectedRoute.jsx"; 
+import ProtectedRoutes from "./components/ProtectedRouters";
 
 function App() {
   return (
@@ -25,41 +25,41 @@ function App() {
           <Route
             path="/"
             element={
-              <ProtectedRoute>
+              <ProtectedRoutes>
                 <HomePage />
-              </ProtectedRoute>
+              </ProtectedRoutes>
             }
           />
           <Route
             path="/products"
             element={
-              <ProtectedRoute>
+              <ProtectedRoutes>
                 <Product />
-              </ProtectedRoute>
+              </ProtectedRoutes>
             }
           />
           <Route
             path="/products/:id"
             element={
-              <ProtectedRoute>
+              <ProtectedRoutes>
                 <ProductDetails />
-              </ProtectedRoute>
+              </ProtectedRoutes>
             }
           />
           <Route
             path="/users"
             element={
-              <ProtectedRoute>
+              <ProtectedRoutes>
                 <Users />
-              </ProtectedRoute>
+              </ProtectedRoutes>
             }
           />
           <Route
             path="/contact"
             element={
-              <ProtectedRoute>
+              <ProtectedRoutes>
                 <Contact />
-              </ProtectedRoute>
+              </ProtectedRoutes>
             }
           />
 
