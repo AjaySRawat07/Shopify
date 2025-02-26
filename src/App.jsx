@@ -8,8 +8,8 @@ import { store } from "./store/store";
 import Product from "./components/Products";
 import ProductDetails from "./components/ProductDetails";
 import Login from "./components/Login";
-import SignUp from "./components/SignUp";
 import ProtectedRoutes from "./components/ProtectedRouters";
+import SignUp from "./components/Sign-up";
 
 function App() {
   return (

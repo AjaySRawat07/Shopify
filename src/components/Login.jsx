@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import shoppingImg from "../assets/simple.img2.jpg";
 
 // Validation Schema
@@ -72,9 +72,9 @@ const Login = () => {
           </button>
 
           {/* Create Account Button */}
-          <button type="button" className="w-full bg-gray-400 text-white p-2 rounded hover:bg-gray-600 transition">
-            <a href="/signup">Create Account</a>
-          </button>
+          <Link to="/signup" className="block text-center w-full bg-gray-400 text-white p-2 rounded hover:bg-gray-600 transition">
+             Create Account
+          </Link>
         </form>
       </div>
 
