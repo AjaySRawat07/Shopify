@@ -9,7 +9,7 @@ import Product from "./components/Products";
 import ProductDetails from "./components/ProductDetails";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
-import ProtectedRoute from "./components/protectedRoute"; 
+import ProtectedRoute from "./components/protectedRoute.jsx"; 
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          {/* Public Routes */}
+          {/* Public Routess */}
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
 
