@@ -1,8 +1,37 @@
-# React + Vite
+eCommerce Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Overview
 
-Currently, two official plugins are available:
+This is a simple eCommerce website built using React.js. It includes essential eCommerce functionalities such as product listing, cart management, and user authentication. The project uses Redux Toolkit for state management and local storage to persist user data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features
+
+Product Listing
+
+Add to Cart
+
+Remove from Cart
+
+User Authentication
+
+Form Validation (React Hook Form + Yup)
+
+Redux Toolkit for Global State Management
+
+Local Storage for User Persistence
+
+Responsive UI with Tailwind CSS
+
+Tech Stack
+
+React.js
+
+Redux Toolkit
+
+React Router
+
+React Hook Form + Yup (Form Validation)
+
+Tailwind CSS
+
+Local Storage API
